@@ -1,0 +1,15 @@
+<div>
+  <span>New request</span>
+  <ul>
+    <li>Name: <%= @contact.name %></li>
+    <li>Email: <%= @contact.email %></li>
+    <li>Company: <%= @contact.company %></li>
+    <li>Phone: <%= @contact.phone %></li>
+    <li>Question: <%= @contact.question %></li>
+    <ol>
+      <% @contact.files.each do |f| %>
+        <li><%= link_to "#{f.filename.to_s}", f %></li>
+      <% end %>
+    </ol>
+  </ul>
+</div>
