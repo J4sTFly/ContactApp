@@ -6,10 +6,12 @@
     <li>Company: <%= @contact.company %></li>
     <li>Phone: <%= @contact.phone %></li>
     <li>Question: <%= @contact.question %></li>
+    <li> Attachments
     <ol>
-      <% @contact.files.each do |f| %>
-        <li><%= link_to "#{f.filename.to_s}", f %></li>
+      <% @contact.files.each do |file| %>
+        <li><%= link_to "#{file.filename}", file%></li>
       <% end %>
     </ol>
+    </li>
   </ul>
 </div>
